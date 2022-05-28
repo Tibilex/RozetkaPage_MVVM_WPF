@@ -9,6 +9,7 @@
     <Window.Resources>
         <ResourceDictionary Source="Styles.xaml"/>
     </Window.Resources>
+    
         <ScrollViewer>
         <Grid ScrollViewer.HorizontalScrollBarVisibility="Visible">
             <Grid.RowDefinitions>
@@ -28,20 +29,20 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock Grid.Row="0" x:Name="categoryName" Text="Компьютеры и Ноутбуки" Style="{StaticResource HeaderName}" Margin="30 0"/>
-                <Image Grid.Row="1" x:Name="bannerImage" Source="/Resources/Banner/banner5.jpg" RenderOptions.BitmapScalingMode="Fant" Margin="50 20 50 20" Stretch="Fill"/>
+                <Image Grid.Row="1" x:Name="bannerImage" RenderOptions.BitmapScalingMode="Fant" Margin="50 20 50 20" Stretch="Fill"/>
                 <Grid Grid.Row="2">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="220"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <StackPanel Grid.Column="1" Orientation="Horizontal">
-                        <RadioButton/>
-                        <RadioButton/>
-                        <RadioButton/>
-                        <RadioButton/>
-                        <RadioButton/>
-                        <RadioButton/>
+                    <StackPanel Grid.Column="1" Orientation="Horizontal" >
+                        <RadioButton Style="{DynamicResource customRadioBtn}" x:Name="banner1" Checked="RadioButton_Checked" IsChecked="True"/>
+                        <RadioButton Style="{DynamicResource customRadioBtn}" x:Name="banner2" Checked="RadioButton_Checked"/>
+                        <RadioButton Style="{DynamicResource customRadioBtn}" x:Name="banner3" Checked="RadioButton_Checked"/>
+                        <RadioButton Style="{DynamicResource customRadioBtn}" x:Name="banner4" Checked="RadioButton_Checked"/>
+                        <RadioButton Style="{DynamicResource customRadioBtn}" x:Name="banner5" Checked="RadioButton_Checked"/>
+                        <RadioButton Style="{DynamicResource customRadioBtn}" x:Name="banner6" Checked="RadioButton_Checked"/>
                     </StackPanel>
                 </Grid>
             </Grid>
@@ -142,7 +143,10 @@
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
-            </Grid>
+            </Grid> 
+            <!-- Category listboxes grid-->
+            
+            
         </Grid> 
     </ScrollViewer>
 </Window>
