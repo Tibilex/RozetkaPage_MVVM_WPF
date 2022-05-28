@@ -56,7 +56,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\Category.cs" />
-    <Compile Include="ViewModel\ViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelCategory.cs" />
+    <Compile Include="View\AdvancedCategoryControl.xaml.cs">
+      <DependentUpon>AdvancedCategoryControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\CategoryControll.xaml.cs">
       <DependentUpon>CategoryControll.xaml</DependentUpon>
     </Compile>
@@ -73,6 +76,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AdvancedCategoryControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

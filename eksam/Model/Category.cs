@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
 namespace eksam.Model
@@ -8,7 +9,17 @@ namespace eksam.Model
         private string _image;
         private string _name;
         private string _subCategory;
+        private List<string> _strings;
 
+        public List<string> Strings
+        {
+            get { return _strings; }
+            set 
+            { 
+                _strings = value; 
+                OnPropertyChanged("Strings");
+            }
+        }
         public string SubCategory
         {
             get { return _subCategory; }
@@ -42,6 +53,15 @@ namespace eksam.Model
             Image = image;
             Name = name;
         }
+
+        public Category(string image, string name, List<string> collection)
+        {
+            Image = image;
+            Name = name;
+            Strings = collection;
+        }
+
+        
 
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName] string prop = "")

@@ -14,9 +14,11 @@
         
         <Style x:Key="hyperlink" TargetType="Hyperlink">
             <Setter Property="Foreground" Value="#3e77b2"/>
+            <Setter Property="TextDecorations" Value="None"/>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Foreground" Value="Red"/>
+                    <Setter Property="TextDecorations" Value="Underline"/>
                 </Trigger>
             </Style.Triggers>
         </Style>
@@ -24,13 +26,15 @@
     
     <Grid Background="White">
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition Height="200"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Image Grid.Row="0" RenderOptions.BitmapScalingMode="Fant" Stretch="Fill"/>
-        <TextBlock Grid.Row="1" Style="{StaticResource CategoryName}" HorizontalAlignment="Center">
-             <Hyperlink x:Name="gitLink" Style="{StaticResource hyperlink}"></Hyperlink>
+        <Image Grid.Row="0" RenderOptions.BitmapScalingMode="Fant" Stretch="Fill" Source="{Binding Image}"/>
+        <TextBlock Grid.Row="1" Style="{StaticResource CategoryName}" HorizontalAlignment="Center" Margin="0 20 0 0">
+             <Hyperlink x:Name="gitLink" Style="{StaticResource hyperlink}">
+                 <TextBlock Text="{Binding Name}"/>
+             </Hyperlink>
         </TextBlock>
     </Grid>
 </UserControl>

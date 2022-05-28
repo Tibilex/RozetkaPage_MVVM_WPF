@@ -1,5 +1,4 @@
-﻿using eksam.ViewModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,18 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace eksam
+namespace eksam.View
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для AdvancedCategoryControl.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AdvancedCategoryControl : UserControl
     {
-
-        public MainWindow()
+        public AdvancedCategoryControl()
         {
             InitializeComponent();
-            DataContext = new ViewModelCategory();
         }
     }
 }
