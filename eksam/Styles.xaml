@@ -1,18 +1,16 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    
+
     <Image x:Key="apple" Source="/Resources/Icons/apple.png"/>
-    <Image x:Key="appleHover" Source="/Resources/Icons/AppleHover.png"/>
     <Image x:Key="asus" Source="/Resources/Icons/asus.png"/>
-    <Image x:Key="asusHover" Source="/Resources/Icons/asusHover.png"/>
     <Image x:Key="hp" Source="/Resources/Icons/hp.png"/>
-    <Image x:Key="hpHover" Source="/Resources/Icons/hpHover.png"/>
     <Image x:Key="acer" Source="/Resources/Icons/acer.png"/>
-    <Image x:Key="acerHover" Source="/Resources/Icons/acerHover.png"/>
     <Image x:Key="lenovo" Source="/Resources/Icons/lenovo.png"/>
-    <Image x:Key="lenovoHover" Source="/Resources/Icons/lenovoHover.png"/>
     <Image x:Key="samsung" Source="/Resources/Icons/samsung.png"/>
-    <Image x:Key="samsungHover" Source="/Resources/Icons/samsungHover.png"/>
+    <Image x:Key="dell" Source="/Resources/Icons/dell.png"/>
+    <Image x:Key="canon" Source="/Resources/Icons/canon.png"/>
+    <Image x:Key="tplink" Source="/Resources/Icons/tp-link.png"/>
+    <Image x:Key="logitech" Source="/Resources/Icons/logitech.jpg"/>
 
     <Style x:Key="HeaderName" TargetType="TextBlock">
         <Setter Property="FontSize" Value="30"/>
@@ -20,14 +18,14 @@
         <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
 
-    <Style x:Key="appleButton" TargetType="Button">
-        <Setter Property="BorderThickness" Value="1"/>
+
+    <Style x:Key="brendBtn" TargetType="Button">
+        <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="Background" Value="White"/>
-        <Setter Property="Width" Value="100"/>
-        <Setter Property="Height" Value="40"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
-        <Setter Property="Content" Value="{StaticResource apple}"/>
+        <Setter Property="Opacity"  Value="0.6"/>
+        <Setter Property="Width"  Value="100"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -36,7 +34,7 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Content"  Value="{StaticResource appleHover}"/>
+                            <Setter Property="Opacity"  Value="1"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

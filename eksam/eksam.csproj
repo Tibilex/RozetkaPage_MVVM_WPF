@@ -108,18 +108,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Icons\AcerHover.png" />
-    <Resource Include="Resources\Icons\AppleHover.png" />
-    <Resource Include="Resources\Icons\AsusHover.png" />
-    <Resource Include="Resources\Icons\CanonHover.png" />
-    <Resource Include="Resources\Icons\DellHover.png" />
-    <Resource Include="Resources\Icons\HpHover.png" />
-    <Resource Include="Resources\Icons\LenovoHover.png" />
-    <Resource Include="Resources\Icons\LogitechHover.png" />
-    <Resource Include="Resources\Icons\SamsungHover.png" />
-    <Resource Include="Resources\Icons\TpLinkHover.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\Category\aksessuari.png" />
     <Resource Include="Resources\Category\akustic.png" />
     <Resource Include="Resources\Category\graphPlanshety.png" />
@@ -158,6 +146,7 @@
     <Resource Include="Resources\Icons\dell.png" />
     <Resource Include="Resources\Icons\hp.png" />
     <Resource Include="Resources\Icons\lenovo.png" />
+    <Resource Include="Resources\Icons\logitech.jpg" />
     <Resource Include="Resources\Icons\samsung.png" />
     <Resource Include="Resources\Icons\tp-link.png" />
   </ItemGroup>

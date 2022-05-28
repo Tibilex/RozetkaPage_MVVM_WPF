@@ -11,8 +11,8 @@
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="660"/> <!-- Header -->
-            <RowDefinition Height="30"/> <!-- brend categorys-->
+            <RowDefinition Height="570"/> <!-- Header -->
+            <RowDefinition Height="40"/> <!-- brend categorys-->
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
@@ -25,7 +25,7 @@
             </Grid.RowDefinitions>
 
             <TextBlock Grid.Row="0" x:Name="categoryName" Text="Компьютеры и Ноутбуки" Style="{StaticResource HeaderName}" Margin="30 0"/>
-            <Image Grid.Row="1" x:Name="bannerImage" Source="/Resources/Banner/banner5.jpg" RenderOptions.BitmapScalingMode="Fant" Margin="50 0"/>
+            <Image Grid.Row="1" x:Name="bannerImage" Source="/Resources/Banner/banner5.jpg" RenderOptions.BitmapScalingMode="Fant" Margin="50 20 50 20" Stretch="Fill"/>
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -44,7 +44,50 @@
         </Grid> <!-- Header -->
 
         <Grid Grid.Row="1">
-            
-        </Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="1"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="1"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="1"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="1"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="1"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="1"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="1"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="1"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="1"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" Style="{StaticResource brendBtn}" Content="{StaticResource apple}"/>
+            <Grid Grid.Column="1" Background="Gray"/>
+            <Button Grid.Column="2" Style="{StaticResource brendBtn}" Content="{StaticResource asus}"/>
+            <Grid Grid.Column="3" Background="Gray"/>
+            <Button Grid.Column="4" Style="{StaticResource brendBtn}" Content="{StaticResource hp}"/>
+            <Grid Grid.Column="5" Background="Gray"/>
+            <Button Grid.Column="6" Style="{StaticResource brendBtn}" Content="{StaticResource acer}"/>
+            <Grid Grid.Column="7" Background="Gray"/>
+            <Button Grid.Column="8" Style="{StaticResource brendBtn}" Content="{StaticResource lenovo}"/>
+            <Grid Grid.Column="9" Background="Gray"/>
+            <Button Grid.Column="10" Style="{StaticResource brendBtn}" Content="{StaticResource samsung}"/>
+            <Grid Grid.Column="11" Background="Gray"/>
+            <Button Grid.Column="12" Style="{StaticResource brendBtn}" Content="{StaticResource dell}"/>
+            <Grid Grid.Column="13" Background="Gray"/>
+            <Button Grid.Column="14" Style="{StaticResource brendBtn}" Content="{StaticResource canon}"/>
+            <Grid Grid.Column="15" Background="Gray"/>
+            <Button Grid.Column="16" Style="{StaticResource brendBtn}" Content="{StaticResource tplink}"/>
+            <Grid Grid.Column="17" Background="Gray"/>
+            <Button Grid.Column="18" Style="{StaticResource brendBtn}" Content="{StaticResource logitech}"/>
+
+        </Grid> <!-- Brand Category Grid -->
+        
+        
     </Grid>
 </Window>
