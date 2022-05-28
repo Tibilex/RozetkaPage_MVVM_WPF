@@ -1,0 +1,50 @@
+﻿<Window x:Class="eksam.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:eksam"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="900" Width="1446">
+    <Window.Resources>
+        <ResourceDictionary Source="Styles.xaml"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="660"/> <!-- Header -->
+            <RowDefinition Height="30"/> <!-- brend categorys-->
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" x:Name="Header">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="500"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" x:Name="categoryName" Text="Компьютеры и Ноутбуки" Style="{StaticResource HeaderName}" Margin="30 0"/>
+            <Image Grid.Row="1" x:Name="bannerImage" Source="/Resources/Banner/banner5.jpg" RenderOptions.BitmapScalingMode="Fant" Margin="50 0"/>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="1" Orientation="Horizontal">
+                    <RadioButton/>
+                    <RadioButton/>
+                    <RadioButton/>
+                    <RadioButton/>
+                    <RadioButton/>
+                    <RadioButton/>
+                </StackPanel>
+            </Grid>
+        </Grid> <!-- Header -->
+
+        <Grid Grid.Row="1">
+            
+        </Grid>
+    </Grid>
+</Window>
