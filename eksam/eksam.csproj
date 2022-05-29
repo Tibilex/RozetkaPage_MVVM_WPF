@@ -56,6 +56,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\Category.cs" />
+    <Compile Include="Model\Product.cs" />
     <Compile Include="ViewModel\ViewModelCategory.cs" />
     <Compile Include="View\AdvancedCategoryControl.xaml.cs">
       <DependentUpon>AdvancedCategoryControl.xaml</DependentUpon>
@@ -150,7 +151,12 @@
     <Resource Include="Resources\Banner\banner3.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\Products\" />
+    <Resource Include="Resources\Products\notebook.jpg" />
+    <Resource Include="Resources\Products\pc.jpg" />
+    <Resource Include="Resources\Products\pc2.jpg" />
+    <Resource Include="Resources\Products\pc3.jpg" />
+    <Resource Include="Resources\Products\pc4.jpg" />
+    <Resource Include="Resources\Products\ssd.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Icons\acer.png" />
@@ -163,6 +169,19 @@
     <Resource Include="Resources\Icons\logitech.jpg" />
     <Resource Include="Resources\Icons\samsung.png" />
     <Resource Include="Resources\Icons\tp-link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\cart.png" />
+    <Resource Include="Resources\Icons\cartchecked.png" />
+    <Resource Include="Resources\Icons\heart.png" />
+    <Resource Include="Resources\Icons\heartChecked.png" />
+    <Resource Include="Resources\Icons\stars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Products\cable.jpg" />
+    <Resource Include="Resources\Products\cable2.jpg" />
+    <Resource Include="Resources\Products\monitor.jpg" />
+    <Resource Include="Resources\Products\monitor2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

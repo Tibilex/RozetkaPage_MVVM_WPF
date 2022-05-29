@@ -5,8 +5,121 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:eksam.View"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+             d:DesignHeight="450" d:DesignWidth="800" Width="200" Height="300">
+    <UserControl.Resources>
+        <Image x:Key="heart" Source="/Resources/Icons/heart.png"/>
+        <Image x:Key="heartCh" Source="/Resources/Icons/heartChecked.png"/>
+        <Image x:Key="cart" Source="/Resources/Icons/cart.png"/>
+        <Image x:Key="cartCh" Source="/Resources/Icons/cartChecked.png"/>
+
+        <Style x:Key="hyperlink" TargetType="Hyperlink">
+            <Setter Property="Foreground" Value="black"/>
+            <Setter Property="TextDecorations" Value="None"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="Red"/>
+                    <Setter Property="TextDecorations" Value="Underline"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="hyperlinkFeed" TargetType="Hyperlink">
+            <Setter Property="Foreground" Value="#3e77b2"/>
+            <Setter Property="TextDecorations" Value="None"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="Red"/>
+                    <Setter Property="TextDecorations" Value="Underline"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="HearthBtn" TargetType="Button">
+            <Setter Property="Width" Value="30"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="VerticalAlignment" Value="top"/>
+            <Setter Property="Content" Value="{StaticResource heart}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Background" Value="white"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Content" Value="{StaticResource heartCh}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="carthBtn" TargetType="Button">
+            <Setter Property="Width" Value="40"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Content" Value="{StaticResource cart}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Background" Value="white"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Content" Value="{StaticResource cartCh}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="price" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24"/>
+        </Style>
+    </UserControl.Resources>
+    
+    <Border BorderBrush="Gray" BorderThickness="1">
+        <Grid Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="160"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Row="0" Style="{StaticResource HearthBtn}" Panel.ZIndex="1"/>
+            <Image Grid.Row="0" x:Name="image" RenderOptions.BitmapScalingMode="Fant" Source="{Binding Image}" Margin="20 40 20 0"/>
+            <TextBlock Grid.Row="1" HorizontalAlignment="Left" Margin="20 20 20 0" TextWrapping="Wrap">                
+                <Hyperlink x:Name="headerLink" Style="{StaticResource hyperlink}">
+                    <TextBlock Text="{Binding Name}" TextWrapping="Wrap"/>
+                </Hyperlink>
+            </TextBlock>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="/Resources/icons/stars.png" HorizontalAlignment="Left" Height="24" Margin="14 0 0 0"/>
+                <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="4 4 0 0">                
+                    <Hyperlink Style="{StaticResource hyperlinkFeed}">
+                        <TextBlock Text="{Binding Feedback}" TextWrapping="Wrap" HorizontalAlignment="Left"/>
+                    </Hyperlink>
+                </TextBlock>
+            </Grid>
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="{Binding Price}" Style="{StaticResource price}" Margin="20 0 0 0"/>
+                <Button Grid.Column="1" Style="{StaticResource carthBtn}" VerticalAlignment="Top"/>
+            </Grid>
+            <TextBlock Grid.Row="4" Text="{Binding Avaliable}" Foreground="#00a046" Margin="22 0 0 0"/>
+        </Grid>
+    </Border> <!-- main Grid -->
 </UserControl>
